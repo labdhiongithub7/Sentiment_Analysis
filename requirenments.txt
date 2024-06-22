@@ -3,3 +3,7 @@ scikit-learn
 pandas
 numpy
 matplotlib
+xgboost
+nltk
+wordcloud
+seaborn
