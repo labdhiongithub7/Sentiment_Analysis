@@ -55,4 +55,7 @@ def predict():
         sentiment = 'positive' if prediction == 0 else 'negative'
         return render_template('home.html', prediction=sentiment)
 
+if __name__ == '__main__':
+    app.run(debug=True)
+
 
