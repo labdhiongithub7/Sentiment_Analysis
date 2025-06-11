@@ -50,9 +50,10 @@ def predict():
     if request.method == 'POST':
         text = request.form['text']
         processed_text = preprocess_review(text)
-        review_bow = bow_vectorizer.transform([processed_text])
+        review_bow = bow_vectorizer.transform([text])
         prediction = pickled_model.predict(review_bow)
         sentiment = 'positive' if prediction == 0 else 'negative'
+        print(prediction)
         return render_template('home.html', prediction=sentiment)
 
 if __name__ == '__main__':
